@@ -1,19 +1,19 @@
 import '../assets/css/App.css';
-import 'weather-icons/css/weather-icons.css'
+import 'weather-icons/css/weather-icons.css';
 
-
-function CurrentWeatherCard(props){
-    return(
-        <div className="currentWeatherCard">
-            <div className="currentWeather-img">
-              <i className={`wi wi-owm-${props.id} icon`}></i>
-              <p>{props.description}</p>
-            </div>
-            <div className="currentWeather-location">{props.city}</div>
-            <div className="currentWeather-temperature">{props.temp} <p>F</p></div>
-          </div>
-
-    )
+function CurrentWeatherCard({ id, city, temp, description }) {
+  return (
+    <div className='currentWeatherCard'>
+      <div className='currentWeather-img'>
+        <i className={`wi wi-owm-${id} icon`}></i>
+        <p>{description}</p>
+      </div>
+      <div className='currentWeather-location'>{city}</div>
+      <div className='currentWeather-temperature'>
+        {temp} <p>F</p>
+      </div>
+    </div>
+  );
 }
 
 export default CurrentWeatherCard;
